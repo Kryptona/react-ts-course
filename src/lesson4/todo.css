@@ -1,0 +1,35 @@
+.todo {
+    padding: 10px;
+    position: relative;
+}
+
+.todosTitle {
+    position: center;
+}
+
+.container {
+    padding: 0 20%;
+}
+
+.inputTodo {
+    padding: 0 0 0 15px;
+    width: 100%;
+    text-align: left;
+    height: 40px;
+    border: 2px solid #a5a5a5;
+    border-radius: 5px;
+    outline: none;
+}
+
+.inputTodo:focus, .inputTodo:hover {
+    border: 2px solid #726d6d;
+}
+
+.checkTodo {
+    position: absolute !important;
+    top: 8px;
+    bottom: 8px;
+    right: 2px;
+}
+
+
