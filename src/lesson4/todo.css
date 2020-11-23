@@ -3,7 +3,7 @@
     position: relative;
 }
 
-.todosTitle {
+.header {
     position: center;
 }
 
@@ -17,7 +17,7 @@
     text-align: left;
     height: 40px;
     border: 2px solid #a5a5a5;
-    border-radius: 5px;
+    border-radius: 8px;
     outline: none;
 }
 
@@ -32,4 +32,25 @@
     right: 2px;
 }
 
+#root{
+    height: 90%;
+}
+
+.content {
+    padding-bottom: 90px;
+}
+
+.wrapper{
+    height: 100%;
+}
+
+body, html{
+    height: 98%;
+    margin-bottom: -100px;
+}
+
+.footer {
+    height: 50px;
+    margin-left: 45%;
+}
 
