@@ -1,25 +1,21 @@
 import React, { useState } from "react";
 import { Checkbox } from "@material-ui/core";
 import "./todo";
-import { data } from "./data";
+import { TodoData } from "./TodoData";
+
 
 interface Props {
-    readonly children: React.ReactNode;
+    readonly data: TodoData;
+    readonly setData: (data: TodoData) => void;
 }
 
-
-const Todo = ({ children }: Props) => {
-
-    const [data, setData] = useState([{ id: 1, name: "Default" }]);
+const Todo = ({ data, setData }: Props) => {
 
     return (
-        <div className="container">
-            {data.map(x =>
-                <div className="todo">
-                    <input className="inputTodo" type="text" defaultValue={x.name}/>
-                    <Checkbox className="checkTodo" color={"primary"}/>
-                </div>
-            )}
+        <div className="todo">
+            <input className="inputTodo" type="text" value={data.name}
+                   onChange={e => setData({ id: data.id, name: (e.target.value) })}/>
+            <Checkbox className="checkTodo" color={"primary"}/>
         </div>
     );
 };
